@@ -11,7 +11,7 @@ app.get("/products", async (req, res) => {
     res.send(productos.slice(0, req.query.limit));
   } else if (req.query.limit) {
     res.send(
-      `<h1>El limite de productos no puede ser nulo ni mayor a los productos dados, productos actuales:</h1> <br> ${productos.map(
+      `<h1>El limite de productos no puede ser 0 ni mayor a los productos dados, productos actuales:</h1> <br> ${productos.map(
         (p) => `<h2>${p.title}</h2>`
       )}`
     );
